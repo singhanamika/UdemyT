@@ -1,0 +1,58 @@
+
+<h1> {{getTitle()}}</h1>
+<p>
+  {{title}}
+</p>
+<ul>
+<li *ngFor = "let Author of author">
+{{Author}}
+</li>
+
+</ul>
+<!-- Property Binding -->
+
+<img [src] = "imgUrl"/>
+
+<!-- attribute Binding -->
+<table>
+<tr>
+<td [attr.colspan] = "ColSpan">
+
+</td>
+
+</tr>
+
+
+</table>
+
+<!-- class Binding -->
+<button class = "btn btn-primary" [class.active]="isActive" > save    </button>
+
+<!-- style Binding -->
+<button [style.backgroundColor] = "isActive?'blue':'white'"> save   </button>
+
+<!-- event Binding Event Bubbling-->
+<div (click) = "divClicked()">
+<button (click) = "onClick($event)"> save </button>
+</div>
+
+<!-- Event Filtering -->
+<input (keyup.enter) = "KeyUp()"/>
+
+<!-- Template Variable>  -->
+<input (keyup.enter) = "keyup($event)"/>
+
+<input #email (keyup.enter) = "pressEnter(email.value)"/>
+
+<!-- Two way Binding -->
+
+<input [(ngModel)] = "phone" (keyup.enter) = "Press()"/>
+<br/>
+<!-- Pipe      -->
+{{Courses.title | uppercase}} <br/>
+{{Courses.students | number}}<br/>
+{{Courses.price}}<br/>
+{{Courses.releaseDate | date}}
+<br/>
+<!-- Custom Pipe      -->
+{{story | summary}} 

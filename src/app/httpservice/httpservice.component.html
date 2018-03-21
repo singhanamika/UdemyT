@@ -1,0 +1,11 @@
+{{ howMany }} 
+{{Menu}}
+<button mat-icon-button (click)="doGET()">	<mat-icon> search </mat-icon> </button>
+<ul class = "list-group">
+<li *ngFor = "let post of posts" class = "list-group-item" >
+
+
+{{post.title}}
+
+</li>
+</ul> 

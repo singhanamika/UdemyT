@@ -1,0 +1,54 @@
+<p>
+  favcomponent works!
+</p>
+<mat-checkbox #show [value]="2" [checked]="isChecked" (change) = "onChange($event)"> Subscribe </mat-checkbox>
+
+<div *ngIf = "show.checked">
+show
+</div>
+
+<mat-radio-group [value] = "0">
+
+ <mat-radio-button [value] ="1">
+ Male
+  </mat-radio-button>
+  <mat-radio-button [value] ="0">
+ Female
+  </mat-radio-button>
+
+</mat-radio-group>
+<mat-form-field>
+<mat-select>
+<mat-option *ngFor = "let color of Color" [value] = "color.id">
+{{color.name}}
+
+</mat-option>
+
+
+
+</mat-select>
+</mat-form-field>
+
+<mat-form-field>
+<input type = "text" matInput Placeholder = "Type Username" required>
+<mat-hint> Type unique </mat-hint>
+<span matSuffix> @domain.com </span>
+<span matPrefix> Username </span>
+</mat-form-field>
+
+<mat-form-field>
+    <textarea matInput matTextareaAutosize placeholder="Textarea"></textarea>
+  </mat-form-field>
+  
+  <!--<mat-form-field>
+  <input type = "text" matInput [matDatepicker] = "startdate">
+  
+  <mat-datepicker-toggle matSuffix [matDatepicker]="startdate"></mat-datepicker-toggle>
+  </mat-form-field>
+   <mat-datepicker #startdate> </mat-datepicker> -->
+   
+   <mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
