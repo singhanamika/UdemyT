@@ -9,7 +9,13 @@ import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 export class HttpserviceComponent implements OnInit {
 posts: any[];
 @Input() howMany: number;
-@Input() Menu: any[];
+@Input() course: {
+	 id: number;
+	  name: string;
+	  age: number;
+	subject: string;
+}
+
   constructor(private http:Http) { }
   doGET(){
   this.http.get('https://jsonplaceholder.typicode.com/posts')
