@@ -1,5 +1,25 @@
 {{ howMany }} 
-{{Menu}}
+
+<table>
+<thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+		        <th>Subject</th>
+      </tr>
+    </thead> 
+<tbody>
+
+      <tr *ngFor="let C of course">
+        
+        <td>{{C.id}}</td>
+        <td>{{C.name}}</td>
+        <td>{{C.age}}</td>
+		<td>{{C.subject}}</td>
+      </tr>
+    </tbody>
+	</table>
 <button mat-icon-button (click)="doGET()">	<mat-icon> search </mat-icon> </button>
 <ul class = "list-group">
 <li *ngFor = "let post of posts" class = "list-group-item" >
