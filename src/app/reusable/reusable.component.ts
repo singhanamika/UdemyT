@@ -17,7 +17,7 @@ how:12,
 Men: ["hme", "News", "Contt", "abut"]
 
 }
-
+var custObject = new Object();
 course1 = {course:	[
   { id: 11, name: 'Mr. Nice', age: 15, subject: 'Science' },
   { id: 12, name: 'Narco', age: 15, subject: 'Science'  },
@@ -30,7 +30,7 @@ course1 = {course:	[
   { id: 19, name: 'Magma', age: 15, subject: 'Science'  },
   { id: 20, name: 'Tornado', age: 15, subject: 'Science'  }
 ]};
-	
+this.objLength = Object.keys(course).length;	
 
   constructor() { }
 
