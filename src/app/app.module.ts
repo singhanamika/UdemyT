@@ -24,6 +24,7 @@ import { HttpserviceComponent } from './httpservice/httpservice.component';
 import { ReusableComponent } from './reusable/reusable.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { DemoNumber } from './demo.number';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 	HttpserviceComponent,
 	ReusableComponent,
 	HeroesComponent,
-	HeroDetailComponent
+	HeroDetailComponent,
+    DemoNumber
   ],
   imports: [
     BrowserModule,
