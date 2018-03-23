@@ -1,11 +1,11 @@
 {{ howMany }} 
 
 <table>
-  <thead>
+ <!-- <thead>
   <th *ngFor='#key of 5 | demoNumber;let i=index'>
 Column{{i}}
 </th>
-    <thead>
+    <thead> -->
 <!--<thead>
       <tr>
         <th>ID</th>
@@ -23,6 +23,9 @@ Column{{i}}
         <td>{{C.age}}</td>
 		<td>{{C.subject}}</td>
       </tr>
+  <tr>
+	  		<td *ngFor="let key of course | keyspipe">{{key}}: {{course[key]}}</td>
+	  </tr>
     </tbody>
 	</table>
 <button mat-icon-button (click)="doGET()">	<mat-icon> search </mat-icon> </button>
