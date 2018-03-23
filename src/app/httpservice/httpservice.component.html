@@ -1,14 +1,19 @@
 {{ howMany }} 
 
 <table>
-<thead>
+  <thead>
+  <th *ngFor='#key of 5 | demoNumber;let i=index'>
+Column{{i}}
+</th>
+    <thead>
+<!--<thead>
       <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Age</th>
 		        <th>Subject</th>
       </tr>
-    </thead> 
+    </thead> -->
 <tbody>
 
       <tr *ngFor="let C of course">
